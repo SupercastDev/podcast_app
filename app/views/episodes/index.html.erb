@@ -1,0 +1,33 @@
+<div class="bg-white rounded-lg shadow">
+  <div class="px-4 py-5 sm:p-6">
+    <h1 class="text-2xl font-bold text-gray-900 mb-6">Latest Episodes</h1>
+    
+    <div class="grid gap-6 lg:grid-cols-2">
+      <%= turbo_frame_tag "episodes" do %>
+        <% @episodes.each do |episode| %>
+          <%= turbo_frame_tag dom_id(episode) do %>
+            <div class="bg-white overflow-hidden shadow rounded-lg divide-y divide-gray-200">
+              <div class="px-4 py-5 sm:px-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                  <%= link_to episode.title, episode_path(episode), class: "hover:text-indigo-600" %>
+                </h3>
+                <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                  Published <%= time_ago_in_words(episode.published_at) %> ago
+                </p>
+              </div>
+              <div class="px-4 py-5 sm:p-6">
+                <p class="text-gray-700"><%= truncate(episode.description, length: 150) %></p>
+                <div class="mt-4 flex items-center text-sm text-gray-500">
+                  <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                  </svg>
+                  <%= pluralize(episode.duration / 60, 'minute') %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
