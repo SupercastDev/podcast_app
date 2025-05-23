@@ -15,21 +15,21 @@ episodes = [
     description: "Learn the basics of Ruby on Rails framework and how to build your first application.",
     published_at: 2.days.ago,
     duration: 1800, # 30 minutes in seconds
-    audio_url: "https://example.com/episodes/rails-basics.mp3"
+    audio_url: "https://download.samplelib.com/mp3/sample-15s.mp3"
   },
   {
     title: "Advanced Rails Techniques",
     description: "Deep dive into advanced Rails features including ActiveRecord, ActionCable, and Hotwire.",
     published_at: 1.day.ago,
     duration: 2400, # 40 minutes in seconds
-    audio_url: "https://example.com/episodes/advanced-rails.mp3"
+    audio_url: "https://download.samplelib.com/mp3/sample-15s.mp3"
   },
   {
     title: "Rails Testing Strategies",
     description: "Comprehensive guide to testing Rails applications using RSpec and Capybara.",
     published_at: Time.current,
     duration: 1500, # 25 minutes in seconds
-    audio_url: "https://example.com/episodes/rails-testing.mp3"
+    audio_url: "https://download.samplelib.com/mp3/sample-15s.mp3"
   }
 ]
 
