@@ -1,24 +1,11 @@
-# README
+# Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Install asdf with `brew install asdf`
+2. Install node / ruby with `asdf install`
+3. `bundle install` to download required gems.
+4. `rails db:setup` to setup the database
 
-Things you may want to cover:
+# Running the app
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Use `bin/dev` to run the app - this app uses tailwindcss and needs to have
+a seperate process running to generate a stylesheet.
